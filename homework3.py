@@ -1,4 +1,6 @@
 # Задача 1. Привести к целому типу -1.6, 2.99
+from itertools import count
+
 print(int(-1.6))
 print(int(2.99))
 
@@ -46,3 +48,24 @@ print(x[?:?:?]) #nesgt"""
 x = "My name is Agent Smith"
 print (x[1])
 print(x[3:16:3])
+
+"""Задача 10. сть массив чисел. Известно, что каждое число в этом массиве имеет 
+пару, кроме одного: [1, 5, 2, 9, 2, 9, 1] => 5
+Напишите программу, которая будет выводить уникальное число"""
+
+array = [1,5,2,9,2,9,1]
+i=0
+while i<len(array):
+    i+=1
+uniq1 = array.count(array[0])
+if uniq1 == 1:
+    print(array[0])
+uniq2 = array.count(array[1])
+if uniq2 ==1:
+    print(array[1])
+uniq3 = array.count(array[2])
+if uniq3 ==1:
+    print(array[2])
+uniq4 = array.count(array[3])
+if uniq4 ==1:
+    print(array[3])
