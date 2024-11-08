@@ -1,0 +1,7 @@
+my_str = ("I've become so numb")
+print(my_str[0])
+str_len = len(my_str)
+print(str_len)
+print(my_str[str_len-1])
+print(my_str[2])
+print(my_str[str_len-3])
