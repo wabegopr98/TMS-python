@@ -1,3 +1,6 @@
+"""Есть строка: “my name is name”. Напечатайте ее, но вместо 2ого “name” вставьте
+ваше имя."""
+
 txt = "my name is name"
 txt_new = txt.split()
 your_name = input("Введите ваше имя")
