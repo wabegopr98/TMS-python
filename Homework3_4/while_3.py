@@ -6,10 +6,11 @@ count = 0
 sum = 0
 
 while(n!=0):
-    d = n%10
-    sum +=d
+    ost = n%10
+    sum +=ost
     n = n//10
     count+=1
 
 print(count)
 print(sum)
+
