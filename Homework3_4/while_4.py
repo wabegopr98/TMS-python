@@ -13,4 +13,3 @@
      grandson_age +=1
 
  print("Возраст дедушки - " + str(grand_age), "возраст внука - " + str(grandson_age))
-
