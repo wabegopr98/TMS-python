@@ -1,6 +1,6 @@
 # Задача 1. Привести к целому типу -1.6, 2.99
 def to_int (*args):
-    return int(*args)
+    return int(number)
 print(to_int(-1.6))
 print(to_int(2.99))
 
@@ -12,7 +12,7 @@ print(new_text("www.my_site.com#about"))
 #Задача 3. Напишите программу, которая добавляет ‘ing’ к слову ‘stroka’
 
 def my_str(text):
-    return text+"ing"
+    return text + "ing"
 print(my_str("stroka"))
 
 #Задача 4. В строке “Ivanou Ivan” поменяйте местами слова => "Ivan Ivanou"
