@@ -11,8 +11,8 @@ with open("text.txt", "r") as file1:
              print("Слишком мало символов. Нужно больше!")
 
          else:
-          print(s[0])
-          print(s[1])
-          count = len(s)
-          print(s[count-1])
-          print(s[count-2])
+            print(s[0])
+            print(s[1])
+            count = len(s)
+            print(s[count-1])
+            print(s[count-2])
