@@ -6,16 +6,10 @@ b = int(input ("Введите число "))
 c = int(input ("Введите число "))
 plus = 0
 
-if(a>0):
-    plus+=1
-else:
-    plus = plus
-if(b>0):
-    plus +=1
-else:
-    plus=plus
-if(c>0):
-    plus+=1
-else:
-    plus=plus
+mylist = [a,b,c]
+for x in mylist:
+    if x > 0:
+        plus += 1
+    else:
+        plus = plus
 print(plus)

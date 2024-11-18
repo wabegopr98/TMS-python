@@ -5,7 +5,7 @@
 високосными, а 1200 и 2000 являются)."""
 
 year = int(input("Введите номер года "))
-if(year%4!=0 or year%100==0 and year%400!=0):
+if(year % 4 != 0 or year % 100 == 0 and year % 400 != 0):
     print(str(year) + " - невисокосный")
 else:
     print(str(year) + " - високосный")
