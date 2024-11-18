@@ -12,29 +12,24 @@ h = int(input("Введите число "))
 i = int(input("Введите число "))
 j = int(input("Введите число "))
 
-multiply_positive = 1
-sum_negative = 0
-count_negative = 0
+multiplyPositive = 1
+sumNegative = 0
+countNegative = 0
 
 
-my_numbers = [a,b,c,d,e,f,g,h,i,j]
-# if my_numbers.__contains__(0):
-#     print(multiply_positive == 0)
+myNumbers = [a, b, c, d, e, f, g, h, i, j]
 
-for x in my_numbers :
-    if(x>0):
-        multiply_positive*=x
-    elif(x<0):
-        sum_negative+=x
-        count_negative+=1
-    elif(x==0):
-        sum_negative = sum_negative
-        multiply_positive = 0
-        count_negative = count_negative
-    else:
-        print("ошибка данных")
+for x in myNumbers :
+    if x > 0:
+        multiplyPositive *= x
+    elif x < 0:
+        sumNegative += x
+        countNegative += 1
+    elif x == 0:
+        sumNegative = sumNegative
+        multiplyPositive = 0
+        countNegative = countNegative
 
-print(multiply_positive)
-print(sum_negative)
-print(count_negative)
-
+print(multiplyPositive)
+print(sumNegative)
+print(countNegative)

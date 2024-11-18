@@ -6,19 +6,19 @@
 weight = int(input("Введите число от 1 до 5 "))
 weight_num = int(input("Введите вес объекта "))
 
-if(weight==1):
+if weight==1:
     print("Вес объекта в киллограммах - " + str(weight_num))
-elif(weight==2):
-    kg_weight = weight_num / 1000000
+elif weight==2:
+    kg_weight = weight_num / 10**6
     print("Вес объекта в киллограммах - " + str(kg_weight))
-elif(weight==3):
-    kg_weight = weight_num / 1000
+elif weight==3:
+    kg_weight = weight_num / 10**3
     print("Вес объекта в киллограммах - " + str(kg_weight))
-elif(weight==4):
-    kg_weight = weight_num*1000
+elif weight==4:
+    kg_weight = weight_num*10**3
     print("Вес объекта в киллограммах - " + str(kg_weight))
-elif(weight==5):
-    kg_weight = weight_num*100
+elif weight==5:
+    kg_weight = weight_num*10**2
     print("Вес объекта в киллограммах - " + str(kg_weight))
 else:
     print("Вы ввели неправильную цифру. Попробуйте еще раз. ")
