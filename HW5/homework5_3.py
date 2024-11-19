@@ -1,5 +1,5 @@
 # Задача 1. Привести к целому типу -1.6, 2.99
-def to_int (*args):
+def to_int(number):
     return int(number)
 print(to_int(-1.6))
 print(to_int(2.99))
