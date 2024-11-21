@@ -27,4 +27,3 @@ with open("list.txt", "r") as file1:
             else:
                 with open("odd_numbers", "w") as file3:
                     file3.write(str(b))
-
