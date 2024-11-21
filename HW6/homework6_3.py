@@ -1,3 +1,5 @@
+#Дан файл вещественных чисел. Заменить в нем все элементы на их квадраты
+
 with open("float.txt", "r") as file1:
     number_lines = file1.readlines()
 
