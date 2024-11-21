@@ -1,14 +1,20 @@
 """Необходимо составить список чисел которые указывают на длину слов в строке:
 sentence = "thequick brown box jumps over the lazy dog", но только если слово не
 "the" c обработкой исключений"""
+from logging import exception
 
-try:
-    sentence = "thequick brown box jumps over the lazy dog"
-    ord_sentence = sentence.split()
-    number_sentence = [len(word) for word in ord_sentence]
-    print(number_sentence)
-    for word in ord_sentence:
-        word.startswith("the")
+sentence = "thequick brown box jumps over the lazy dog"
+ord_sentence = sentence.split(" ")
+number_sentence = []
 
-except:
-    print("Найдено слово начинающееся на the")
+for word in ord_sentence:
+    try:
+        if word == "the":
+
+            raise Exception
+        number_sentence.append(len(word))
+
+    except:
+        print("Найдено слово the")
+
+print(number_sentence)
