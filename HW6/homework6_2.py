@@ -18,12 +18,12 @@ with open("list.txt", "r") as file1:
             if int(symbol) % 2 == 0:
                 a+=symbol
 
-            if int(symbol) % 2 != 0:
+            else:
                 b+=symbol
 
             if a:
                 with open("even_numbers", "w") as file2:
                     file2.write(str(a))
-            else:
+            if b:
                 with open("odd_numbers", "w") as file3:
                     file3.write(str(b))
