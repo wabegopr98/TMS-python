@@ -1,31 +1,35 @@
-n = int(input("Факториал какого числа нужно найти? "))
+"""Написать обычную функцию для факториала, генератор и рекурсию. Сравнить их время работы"""
+import datetime
+
+start = datetime.datetime.now()
 def factorial(n):
-    result= 1
-    while n >= 1:
-        result *= n
-        n-=1
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
     return result
+end = datetime.datetime.now()
+fact_time = end - start
+print(fact_time)
 
-print(factorial(n))
+start = datetime.datetime.now()
+def factorial_recursive(n):
+    return 1 if n < 2 else n * factorial_recursive(n - 1)
+end = datetime.datetime.now()
+recurs_time = end - start
+print(recurs_time)
 
-# x = int(input("Факториал какого числа нужно найти? "))
-# def factorial_new(x):
-#     if n == 0:
-#         return 1
-#     else:
-#         return n * factorial_new(x-1)
-# print(factorial_new(x))
+start = datetime.datetime.now()
+def factorial_generator(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+        yield result
+end = datetime.datetime.now()
+gen_time = end - start
+print(gen_time)
 
-def factorial(z):
-    if z <= 1:
-        return 1
-    else:
-        return z * factorial(z-1)
-z = int(input("Введите число:"))
-print(factorial(z))
-
-
-from functools import reduce
-print(reduce(lambda x, y: x*y, [x for x in range(1, int(input("Факториал какого числа нужно найти? "))+1)]))
-
-
+times = [fact_time, recurs_time,gen_time]
+def best_result(result):
+    return min(result)
+best_time = best_result(times)
+print(f"Найлучшее время экзекьюшена", best_time)
