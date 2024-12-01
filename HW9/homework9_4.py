@@ -10,11 +10,11 @@ class Sportsman:
         self.__type_of_sport = new_sport
         return "He didn't change type of sport"
 
-    def is_greatest(self, surname, allknown = None):
+    def is_greatest(self, surname, allknown: bool):
         if allknown:
-            return f"This is  {surname}. He is allknown"
+            return f"This is  {surname}. He is {self.age}. He is {self.gender}. He is allknown"
         else:
-            return f"This is  {surname}. He is not allknown"
+            return f"This is  {surname}. He is {self.age}. He is not allknown"
 
     def can_score(self, goal = None):
         if goal:
@@ -22,7 +22,7 @@ class Sportsman:
         else:
             return "He cant make difference in his type of sport"
 
-    def is_legend(self, is_legend = None):
+    def is_legend(self, is_legend : bool):
         if is_legend:
             return "He is legend!"
 
@@ -35,10 +35,11 @@ class HockeyPlayer(Sportsman):
         return "He can make difference in hockey"
 
 Messi = Footballer("male", 36, "football")
-print(Messi.is_greatest(" Leo Messi", "yes"))
+print(Messi.is_greatest(" Leo Messi", True))
 print(Messi.can_score("yes"))
 
 Ovechkin = HockeyPlayer("male", 39, "hockey")
-print(Ovechkin.is_greatest("Alex Ovechkin", "yes"))
+print(Ovechkin.is_greatest("Alex Ovechkin", True))
 print(Ovechkin.can_score("yes"))
 print(Ovechkin.change_sport("No"))
+print(Ovechkin.is_legend(True))
