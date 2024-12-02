@@ -35,17 +35,17 @@ class Flower(ABC):
 
 class Rose(Flower):
     def __str__(self):
-        return f"Название цветка - {self.name}, стоимость - {self.cost}, длительность жизни - {self.lifespan} ч."
+        return f"Flower name - {self.name}, cost - {self.cost}, lifespan - {self.lifespan} h."
 
 
 class Tulip(Flower):
     def __str__(self):
-        return f"Название цветка - {self.name}, стоимость - {self.cost}, длительность жизни - {self.lifespan} ч."
+        return f"Flower name - {self.name}, cost - {self.cost}, lifespan - {self.lifespan} h."
 
 
 class Daisy(Flower):
     def __str__(self):
-        return f"Название цветка - {self.name}, стоимость - {self.cost}, длительность жизни - {self.lifespan} ч."
+        return f"Flower name - {self.name}, cost - {self.cost}, lifespan - {self.lifespan} h."
 
 
 class Accessory:
@@ -61,7 +61,7 @@ class Accessory:
         self.cost = cost
 
     def __str__(self):
-        return f"Имя аксессуара - {self.name}, цена аксессуара - {self.cost}"
+        return f"Accessoir name - {self.name}, cost - {self.cost}"
 
 
 class Bouquet:
