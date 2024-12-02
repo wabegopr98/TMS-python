@@ -24,6 +24,7 @@ class Bird(Creature):
 class Dog(Creature):
     def __init__(self, alive = None, color = None):
         super().__init__(alive)
+        self.color = color
     def speak(self):
         return "Bark"
 
@@ -33,5 +34,6 @@ print(titmouse.speak())
 print(titmouse.has_new_children(2))
 print(titmouse.show_children())
 
-jack = Dog()
+jack = Dog("yes", "orange")
+print(f"Hi! It's my dog! It's {jack.color}")
 print(jack.speak())
