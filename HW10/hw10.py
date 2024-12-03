@@ -35,17 +35,17 @@ class Flower(ABC):
 
 class Rose(Flower):
     def __str__(self):
-        return f"Название цветка - {self.name}, стоимость - {self.cost}, длительность жизни - {self.lifespan} ч."
+        return f"Flower name - {self.name}, cost - {self.cost}, lifespan - {self.lifespan} h."
 
 
 class Tulip(Flower):
     def __str__(self):
-        return f"Название цветка - {self.name}, стоимость - {self.cost}, длительность жизни - {self.lifespan} ч."
+        return f"Flower name - {self.name}, cost - {self.cost}, lifespan - {self.lifespan} h."
 
 
 class Daisy(Flower):
     def __str__(self):
-        return f"Название цветка - {self.name}, стоимость - {self.cost}, длительность жизни - {self.lifespan} ч."
+        return f"Flower name - {self.name}, cost - {self.cost}, lifespan - {self.lifespan} h."
 
 
 class Accessory:
@@ -61,7 +61,7 @@ class Accessory:
         self.cost = cost
 
     def __str__(self):
-        return f"Имя аксессуара - {self.name}, цена аксессуара - {self.cost}"
+        return f"Accessoir name - {self.name}, cost - {self.cost}"
 
 
 class Bouquet:
@@ -104,7 +104,7 @@ class Bouquet:
 
     def contains_flower(self, flower_name: str) -> bool:
         """Проверить, есть ли цветок в букете."""
-        return any(flower.name == flower.name for flower in self.flowers)
+        return any(flower.name == flower_name for flower in self.flowers)
         # any
 
     def __str__(self):
