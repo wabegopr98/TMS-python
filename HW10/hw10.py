@@ -104,7 +104,7 @@ class Bouquet:
 
     def contains_flower(self, flower_name: str) -> bool:
         """Проверить, есть ли цветок в букете."""
-        return any(flower.name == flower.name for flower in self.flowers)
+        return any(flower.name == flower_name for flower in self.flowers)
         # any
 
     def __str__(self):
