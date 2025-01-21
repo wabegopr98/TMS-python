@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.select import Select
 from webdriver_manager.chrome import ChromeDriverManager
 
 
@@ -56,7 +57,7 @@ def test_select():
         dok3.click()
 
         #Шаг 4. Проверяем что у нас выбрана именно doc3
-        assert dok3.is_displayed()
+        assert Select(select_field).first_selected_option.text == "doc 3"
 
         # import pdb
         # pdb.set_trace()
