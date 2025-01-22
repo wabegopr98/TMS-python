@@ -1,5 +1,5 @@
 import pytest
-from app.task_manager import TaskManager
+from hw20.app.task_manager import TaskManager
 import allure
 
 @pytest.fixture
