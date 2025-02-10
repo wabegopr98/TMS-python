@@ -11,14 +11,14 @@ class BuyerInfo(BasePage):
     FINISH_BUTTON = (By.ID, "finish")
     SUCCESSFULL_BUY = (By.CLASS_NAME, "complete-header")
 
-    def enter_first_name(self):
-        self.enter_text(self.FIRST_NAME, "Sergey")
+    def enter_first_name(self, first_name):
+        self.enter_text(self.FIRST_NAME, first_name)
 
-    def enter_second_name(self):
-        self.enter_text(self.LAST_NAME, "Ivanov")
+    def enter_second_name(self, second_name):
+        self.enter_text(self.LAST_NAME, second_name)
 
-    def enter_zip(self):
-        self.enter_text(self.ZIP, "000000")
+    def enter_zip(self, zip):
+        self.enter_text(self.ZIP, zip)
 
     def click_continue(self):
         self.click_element(self.CONTINUE_BUTTON)
