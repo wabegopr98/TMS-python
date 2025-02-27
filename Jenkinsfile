@@ -2,8 +2,9 @@ pipeline {
     agent any
 
     environment {
-        CONTAINER_NAME = 'python-tests-container'
+        CONTAINER_NAME = 'python-tests-container-SerjRab'
         ALLURE_RESULTS_DIR = 'target/allure-results'
+        JOB_NAME = 'GIT_Sergey_Pipe'
     }
 
     stages {
@@ -24,7 +25,7 @@ pipeline {
             steps {
                 sh '''
                 echo "Создаем контейнер для тестов..."
-                docker run -d --rm --name python-tests-container -v  /var/lib/docker/volumes/jenkins-data/_data/workspace/GIT_Sergey_Pipe:/app -w /app python:3.9 tail -f /dev/null
+                docker run -d --rm --name $CONTAINER_NAME -v  /var/lib/docker/volumes/jenkins-data/_data/workspace/$JOB_NAME:/app -w /app python:3.9 tail -f /dev/null
 
                 '''
             }
