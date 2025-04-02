@@ -1,0 +1,19 @@
+from tests.api.endpoints.base_endpoint import Endpoint
+headers = {"Content-Type": "application/json"}
+
+class RegisterUser(Endpoint):
+    schema = {
+        "username": "string",
+        "password": "string"
+    }
+
+    def new_user(self, payload):
+        self.response = self.session.post(f"{self.url}/register", json=payload, headers = headers)
+        self.response_json = self.response.json()
+        print(self.response_json)
+
+    def get_message(self):
+        return self.get_data()['message']
+
+    def get_code(self):
+        return self.response.status_code
